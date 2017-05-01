@@ -1,5 +1,6 @@
 # coding:utf-8
 import numpy as np
+import matplotlib.pylab as plt
 
 def step_function(x):
   y = x > 0
@@ -16,3 +17,11 @@ def step_function(x):
 # >>> y = y.astype(np.int)
 # >>> y
 # array([0, 1, 1])
+
+
+x = np.arange(-5.0, 5.0, 0.1)
+y = step_function(x)
+plt.plot(x, y)
+plt.ylim(-0.1, 1.1) # y軸の範囲指定
+plt.show()
+
